@@ -60,19 +60,19 @@ updated: 2026-10-02T07:15:00Z
 ---
 
 ### Phase 4: JavaFX Presentation Layer
-**Status:** 🔄 Ready to Execute  
+**Status:** ✅ Complete  
 **Objective:** Construct the JavaFX application (`MainApp`) featuring a 60 FPS `Canvas` renderer, `AnimationTimer` with 150ms tile travel interpolation, 5-frame attack animations, a dark sci-fi retro HUD, dialogue overlay, and modular `AudioService`.  
 **Depends on:** Phase 3  
 **Requirements:** REQ-13, REQ-14, REQ-15  
 
 **Plans:**
-- [ ] Plan 4-01: JavaFX Canvas Viewport, AnimationTimer & Sprite Engine
-- [ ] Plan 4-02: Retro HUD Layout, Controls, Dialogue Overlay & AudioService
+- [x] Plan 4-01: JavaFX Canvas Viewport, AnimationTimer & Sprite Engine
+- [x] Plan 4-02: Retro HUD Layout, Controls, Dialogue Overlay & AudioService
 
 ---
 
 ### Phase 5: Demo Campaign Assets & End-to-End Verification
-**Status:** ⬜ Not Started  
+**Status:** 🔄 Ready to Execute  
 **Objective:** Bundle 32x32 retro pixel-art sprites and sound effects with procedural fallbacks, verify full demonstration campaign playthrough from Maintenance Room to Main Exit, and finalize documentation.  
 **Depends on:** Phase 4  
 **Requirements:** REQ-10, REQ-13, REQ-15  
@@ -86,5 +86,5 @@ updated: 2026-10-02T07:15:00Z
 | **1. Foundation & Domain Core** | ✅ Complete | 3/3 | 100% |
 | **2. Systems & Persistence** | ✅ Complete | 3/3 | 100% |
 | **3. Playable Terminal CLI** | ✅ Complete | 2/2 | 100% |
-| **4. JavaFX Presentation Layer** | 🔄 Ready | 0/2 | 0% |
-| **5. Assets & Verification** | ⬜ Not Started | 0/2 | 0% |
+| **4. JavaFX Presentation Layer** | ✅ Complete | 2/2 | 100% |
+| **5. Assets & Verification** | 🔄 Ready | 0/2 | 0% |

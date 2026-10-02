@@ -1,0 +1,221 @@
+/* ==========================================================================
+   The Lost Facility Engine — Dark Cyberpunk Retro Sci-Fi Theme
+   ========================================================================== */
+
+.root {
+    -fx-font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    -fx-base: #060913;
+    -fx-background: #060913;
+    -fx-text-fill: #e2e8f0;
+}
+
+/* Panel Backgrounds */
+.hud-panel {
+    -fx-background-color: #0b111e;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10 16 10 16;
+}
+
+.sidebar-panel {
+    -fx-background-color: #080d18;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 0 0 0 1;
+    -fx-padding: 12;
+}
+
+.bottom-panel {
+    -fx-background-color: #080d18;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 10 16 10 16;
+}
+
+/* Titles and Headers */
+.room-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00f0ff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 240, 255, 0.4), 6, 0, 0, 0);
+}
+
+.room-desc {
+    -fx-font-size: 12px;
+    -fx-text-fill: #94a3b8;
+}
+
+.section-header {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #38bdf8;
+    -fx-padding: 4 0 4 0;
+}
+
+/* HP Progress Bar */
+.hp-bar {
+    -fx-pref-height: 14px;
+}
+
+.hp-bar .track {
+    -fx-background-color: #162032;
+    -fx-background-radius: 3px;
+    -fx-border-color: #334155;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
+
+.hp-bar .bar {
+    -fx-background-color: linear-gradient(to right, #059669, #10b981);
+    -fx-background-radius: 2px;
+    -fx-effect: dropshadow(three-pass-box, rgba(16, 185, 129, 0.5), 6, 0, 0, 0);
+}
+
+/* Cyber Buttons */
+.cyber-button {
+    -fx-background-color: #111827;
+    -fx-text-fill: #38bdf8;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-padding: 6 12 6 12;
+    -fx-cursor: hand;
+}
+
+.cyber-button:hover {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: #00f0ff;
+    -fx-border-color: #00f0ff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 240, 255, 0.4), 6, 0, 0, 0);
+}
+
+.cyber-button:pressed {
+    -fx-background-color: #0f172a;
+    -fx-translate-y: 1px;
+}
+
+.action-button-danger {
+    -fx-background-color: #1f1315;
+    -fx-text-fill: #f43f5e;
+    -fx-border-color: #4c1d24;
+}
+
+.action-button-danger:hover {
+    -fx-background-color: #2b171c;
+    -fx-text-fill: #fb7185;
+    -fx-border-color: #f43f5e;
+    -fx-effect: dropshadow(gaussian, rgba(244, 63, 94, 0.4), 6, 0, 0, 0);
+}
+
+/* Command Terminal Field */
+.command-input {
+    -fx-background-color: #0a0f1d;
+    -fx-text-fill: #00f0ff;
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6 10 6 10;
+}
+
+.command-input:focused {
+    -fx-border-color: #00f0ff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 240, 255, 0.5), 8, 0, 0, 0);
+}
+
+/* Message Log Console */
+.log-console {
+    -fx-background-color: #050811;
+    -fx-text-fill: #94a3b8;
+    -fx-font-family: 'Consolas', 'Courier New', monospace;
+    -fx-font-size: 12px;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.log-console .content {
+    -fx-background-color: #050811;
+}
+
+/* Sidebar ListViews */
+.cyber-list {
+    -fx-background-color: #090e1a;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+.cyber-list .list-cell {
+    -fx-background-color: #090e1a;
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 12px;
+    -fx-padding: 6 8 6 8;
+    -fx-border-color: #121927;
+    -fx-border-width: 0 0 1 0;
+}
+
+.cyber-list .list-cell:filled:selected {
+    -fx-background-color: #162032;
+    -fx-text-fill: #00f0ff;
+    -fx-border-color: #00f0ff;
+    -fx-border-width: 1px;
+}
+
+.cyber-list .list-cell:filled:hover {
+    -fx-background-color: #111a2c;
+    -fx-text-fill: #f1f5f9;
+}
+
+/* Tabs */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #080d18;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #0d1322;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 1 1 0 1;
+    -fx-padding: 4 12 4 12;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #162032;
+    -fx-border-color: #00f0ff #1e293b #162032 #1e293b;
+    -fx-border-width: 2 1 0 1;
+}
+
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #00f0ff;
+}
+
+/* Scrollbars */
+.scroll-bar:vertical {
+    -fx-background-color: #080d18;
+    -fx-pref-width: 10px;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #1e293b;
+    -fx-background-radius: 4px;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #00f0ff;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-pref-height: 0;
+    -fx-padding: 0;
+}
