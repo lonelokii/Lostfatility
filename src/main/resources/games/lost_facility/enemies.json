@@ -1,0 +1,28 @@
+[
+  {
+    "id": "robot_corridor",
+    "name": "Security Robot Unit-A",
+    "roomId": "corridor",
+    "x": 6,
+    "y": 2,
+    "hp": 50,
+    "attack": 10,
+    "defense": 3,
+    "detectionRange": 4,
+    "expReward": 45,
+    "enemyType": "robot"
+  },
+  {
+    "id": "robot_security",
+    "name": "Patrol Drone-Beta",
+    "roomId": "security_room",
+    "x": 5,
+    "y": 1,
+    "hp": 40,
+    "attack": 8,
+    "defense": 2,
+    "detectionRange": 3,
+    "expReward": 35,
+    "enemyType": "drone"
+  }
+]

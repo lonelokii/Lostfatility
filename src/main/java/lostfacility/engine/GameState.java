@@ -14,6 +14,7 @@ public class GameState implements Serializable {
     private Room currentRoom;
     private final Player player;
     private final Map<String, List<Enemy>> roomEnemies;
+    private final Map<String, List<Npc>> roomNpcs;
     private final Map<String, Boolean> flags;
     private boolean gameWon;
     private boolean gameOver;
@@ -23,6 +24,7 @@ public class GameState implements Serializable {
         this.player = Objects.requireNonNull(player, "Player must not be null");
         this.currentRoom = world.getStartingRoom();
         this.roomEnemies = new HashMap<>();
+        this.roomNpcs = new HashMap<>();
         this.flags = new HashMap<>();
         this.gameWon = false;
         this.gameOver = false;
@@ -57,6 +59,38 @@ public class GameState implements Serializable {
         if (roomId != null && enemy != null) {
             roomEnemies.computeIfAbsent(roomId, k -> new ArrayList<>()).add(enemy);
         }
+    }
+
+    public List<Npc> getNpcsInCurrentRoom() {
+        if (currentRoom == null) return Collections.emptyList();
+        return roomNpcs.computeIfAbsent(currentRoom.getId(), k -> new ArrayList<>());
+    }
+
+    public void addNpcToRoom(String roomId, Npc npc) {
+        if (roomId != null && npc != null) {
+            roomNpcs.computeIfAbsent(roomId, k -> new ArrayList<>()).add(npc);
+        }
+    }
+
+    public Optional<Npc> findNpcAt(Position pos) {
+        if (pos == null) return Optional.empty();
+        for (Npc npc : getNpcsInCurrentRoom()) {
+            if (npc.getPosition().equals(pos)) {
+                return Optional.of(npc);
+            }
+        }
+        return Optional.empty();
+    }
+
+    public Optional<Npc> findNpcByNameOrId(String query) {
+        if (query == null || query.isBlank()) return Optional.empty();
+        String q = query.trim().toLowerCase();
+        for (Npc npc : getNpcsInCurrentRoom()) {
+            if (npc.getName().toLowerCase().contains(q) || npc.getId().equalsIgnoreCase(q)) {
+                return Optional.of(npc);
+            }
+        }
+        return Optional.empty();
     }
 
     public Optional<Enemy> findEnemyAt(Position pos) {

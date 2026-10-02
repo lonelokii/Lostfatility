@@ -1,0 +1,134 @@
+{
+  "id": "lost_facility_world",
+  "name": "The Lost Facility",
+  "startingRoomId": "maintenance_room",
+  "rooms": [
+    {
+      "id": "maintenance_room",
+      "name": "Maintenance Room",
+      "description": "A cold maintenance room filled with broken machinery and flickering emergency lights.",
+      "layout": [
+        "#######",
+        "#..P..#",
+        "#.....#",
+        "#...D.#",
+        "#######"
+      ],
+      "exits": {
+        "south": "corridor"
+      },
+      "doors": [
+        {
+          "x": 4,
+          "y": 3,
+          "locked": false
+        }
+      ],
+      "items": [
+        {
+          "itemId": "rusty_key",
+          "x": 1,
+          "y": 2
+        },
+        {
+          "itemId": "iron_sword",
+          "x": 5,
+          "y": 2
+        }
+      ]
+    },
+    {
+      "id": "corridor",
+      "name": "Central Corridor",
+      "description": "A long metallic hallway connecting major facility wings. Red emergency beacons pulse overhead.",
+      "layout": [
+        "#########",
+        "#.......#",
+        "#.......#",
+        "#.......#",
+        "#########"
+      ],
+      "exits": {
+        "north": "maintenance_room",
+        "west": "storage_room",
+        "east": "security_room"
+      },
+      "doors": [],
+      "items": []
+    },
+    {
+      "id": "storage_room",
+      "name": "Storage Room",
+      "description": "Rows of supply crates and lockers. Several survival provisions remain intact.",
+      "layout": [
+        "#######",
+        "#.....#",
+        "#.....#",
+        "#.....#",
+        "#######"
+      ],
+      "exits": {
+        "east": "corridor"
+      },
+      "doors": [],
+      "items": [
+        {
+          "itemId": "health_potion",
+          "x": 2,
+          "y": 1
+        },
+        {
+          "itemId": "old_note",
+          "x": 4,
+          "y": 1
+        },
+        {
+          "itemId": "spare_battery",
+          "x": 3,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "id": "security_room",
+      "name": "Security Operations Room",
+      "description": "Terminals display facility surveillance feeds. Dr. Aris is huddled behind the console.",
+      "layout": [
+        "#######",
+        "#.....#",
+        "#.....#",
+        "#..D..#",
+        "#######"
+      ],
+      "exits": {
+        "west": "corridor",
+        "south": "main_exit"
+      },
+      "doors": [
+        {
+          "x": 3,
+          "y": 3,
+          "locked": true,
+          "keyRequiredId": "access_card"
+        }
+      ],
+      "items": []
+    },
+    {
+      "id": "main_exit",
+      "name": "Facility Surface Airway",
+      "description": "The heavy blast doors have depressurized. Fresh outdoor air floods the chamber. Freedom!",
+      "layout": [
+        "#######",
+        "#..X..#",
+        "#.....#",
+        "#######"
+      ],
+      "exits": {
+        "north": "security_room"
+      },
+      "doors": [],
+      "items": []
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "escape_facility",
+    "title": "Escape the Facility",
+    "description": "Navigate the compromised research facility, locate the security clearance card, and reach the surface exit.",
+    "objectives": [
+      {
+        "id": "find_key",
+        "description": "Find the Rusty Key in the Maintenance Room.",
+        "type": "COLLECT_ITEM",
+        "targetId": "rusty_key"
+      },
+      {
+        "id": "reach_corridor",
+        "description": "Pass through the maintenance hatch into the Central Corridor.",
+        "type": "ENTER_ROOM",
+        "targetId": "corridor"
+      },
+      {
+        "id": "reach_security",
+        "description": "Navigate to the Security Operations Room.",
+        "type": "ENTER_ROOM",
+        "targetId": "security_room"
+      },
+      {
+        "id": "obtain_access_card",
+        "description": "Obtain the Master Access Card from Dr. Aris.",
+        "type": "COLLECT_ITEM",
+        "targetId": "access_card"
+      },
+      {
+        "id": "reach_exit",
+        "description": "Unlock the blast doors and reach the Surface Airway exit.",
+        "type": "ENTER_ROOM",
+        "targetId": "main_exit"
+      }
+    ]
+  }
+]

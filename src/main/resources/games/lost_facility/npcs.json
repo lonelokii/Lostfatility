@@ -1,0 +1,10 @@
+[
+  {
+    "id": "dr_aris",
+    "name": "Dr. Aris",
+    "roomId": "security_room",
+    "x": 2,
+    "y": 1,
+    "dialogueTreeId": "scientist_dialogue"
+  }
+]

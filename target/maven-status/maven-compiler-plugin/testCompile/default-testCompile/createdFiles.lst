@@ -1,4 +1,7 @@
+lostfacility/persistence/SaveManagerTest.class
+lostfacility/persistence/JsonLoaderTest.class
 lostfacility/engine/CommandParserTest.class
-lostfacility/engine/CombatMathTest.class
 lostfacility/engine/MovementAndCollisionTest.class
+lostfacility/engine/CombatMathTest.class
+lostfacility/system/QuestAndDialogueTest.class
 lostfacility/engine/InventoryAndItemTest.class

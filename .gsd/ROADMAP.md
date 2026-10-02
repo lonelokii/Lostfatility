@@ -1,19 +1,19 @@
 ---
 milestone: v1.0
 version: 1.0.0
-updated: 2026-10-02T07:00:00Z
+updated: 2026-10-02T07:10:00Z
 ---
 
 # ROADMAP.md — Project Roadmap
 
-> **Current Phase:** Phase 2 — Game Systems & JSON Persistence  
-> **Status:** 🔄 Planning Phase 2  
+> **Current Phase:** Phase 3 — Playable Terminal CLI Game Loop  
+> **Status:** 🔄 Ready to Execute  
 
 ## Must-Haves (from SPEC)
 
 - [x] Reusable decoupled engine core with zero JavaFX dependencies (Verified in Phase 1)
-- [ ] Data-driven game data loading from JSON (`games/lost_facility/`)
-- [ ] Turn-based combat, enemy AI, collision, inventory, and quest tracking
+- [x] Data-driven game data loading from JSON (`games/lost_facility/`) (Verified in Phase 2)
+- [x] Turn-based combat, enemy AI, collision, inventory, and quest tracking (Verified in Phase 1 & 2)
 - [ ] Interactive playable Terminal CLI mode (`CliApp`)
 - [ ] JavaFX 2D graphical mode (`MainApp`) with Canvas, HUD, animations, and sound
 - [ ] Complete demonstration campaign "The Lost Facility" from start to exit
@@ -35,18 +35,27 @@ updated: 2026-10-02T07:00:00Z
 ---
 
 ### Phase 2: Game Systems & JSON Persistence
-**Status:** 🔄 Ready to Execute  
+**Status:** ✅ Complete  
 **Objective:** Implement `CombatSystem` (damage formula, retaliation), `QuestManager` (objective progression), `DialogueManager` (branching choice trees), and `JsonLoader` / `SaveManager` with multi-slot persistence. Author `games/lost_facility/` content files.  
 **Depends on:** Phase 1  
 **Requirements:** REQ-04, REQ-05, REQ-06, REQ-07, REQ-10, REQ-11  
 
+**Plans:**
+- [x] Plan 2-01: Combat, Quest & Dialogue Systems
+- [x] Plan 2-02: JSON Content Loader, Save/Load Manager & Data Files
+- [x] Plan 2-03: Systems & Persistence Integration Tests (18/18 tests passing)
+
 ---
 
 ### Phase 3: Playable Terminal CLI Game Loop
-**Status:** ⬜ Not Started  
+**Status:** 🔄 Ready to Execute  
 **Objective:** Build an interactive terminal CLI game runner (`CliApp`) rendering ASCII maps, accepting text commands, printing colored combat logs, and allowing full gameplay from start to escape without any GUI.  
 **Depends on:** Phase 2  
 **Requirements:** REQ-12  
+
+**Plans:**
+- [ ] Plan 3-01: ASCII Map Renderer & CLI Output Formatter
+- [ ] Plan 3-02: Terminal Game Loop & Interactive Verification
 
 ---
 
@@ -71,7 +80,7 @@ updated: 2026-10-02T07:00:00Z
 | Phase | Status | Plans | Complete |
 |---|---|---|---|
 | **1. Foundation & Domain Core** | ✅ Complete | 3/3 | 100% |
-| **2. Systems & Persistence** | 🔄 Ready | 0/3 | 0% |
-| **3. Playable Terminal CLI** | ⬜ Not Started | 0/2 | 0% |
+| **2. Systems & Persistence** | ✅ Complete | 3/3 | 100% |
+| **3. Playable Terminal CLI** | 🔄 Ready | 0/2 | 0% |
 | **4. JavaFX Presentation Layer** | ⬜ Not Started | 0/2 | 0% |
 | **5. Assets & Verification** | ⬜ Not Started | 0/2 | 0% |

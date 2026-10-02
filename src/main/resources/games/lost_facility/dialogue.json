@@ -1,0 +1,72 @@
+{
+  "scientist_dialogue": [
+    {
+      "id": "start",
+      "speaker": "Dr. Aris",
+      "text": "Thank God someone is alive! The automated security defense grid went haywire after the core failure.",
+      "choices": [
+        {
+          "text": "What happened here?",
+          "nextNodeId": "history"
+        },
+        {
+          "text": "How do I get out of this facility?",
+          "nextNodeId": "exit_info"
+        },
+        {
+          "text": "Do you have the security card for the main exit?",
+          "nextNodeId": "give_card",
+          "grantFlag": "talked_to_scientist"
+        },
+        {
+          "text": "Stay hidden. I'll deal with the robots.",
+          "nextNodeId": "end"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "speaker": "Dr. Aris",
+      "text": "A power surge corrupted the sub-level routing. The security robots now classify all biological personnel as unauthorized contaminants.",
+      "choices": [
+        {
+          "text": "How do we escape?",
+          "nextNodeId": "exit_info"
+        },
+        {
+          "text": "I see. Let's talk about our options.",
+          "nextNodeId": "start"
+        }
+      ]
+    },
+    {
+      "id": "exit_info",
+      "speaker": "Dr. Aris",
+      "text": "The main blast doors to the surface are just south of here, but they require high-clearance access. Without the Master Access Card, the door remains hermetically sealed.",
+      "choices": [
+        {
+          "text": "Do you have the card?",
+          "nextNodeId": "give_card",
+          "grantFlag": "talked_to_scientist"
+        },
+        {
+          "text": "I need to check my gear first.",
+          "nextNodeId": "start"
+        }
+      ]
+    },
+    {
+      "id": "give_card",
+      "speaker": "Dr. Aris",
+      "text": "Here, take my Master Access Card. Slide it into the blast door terminal to the south. Go to the surface and alert the outside world!",
+      "choices": [
+        {
+          "text": "Thank you, Doctor. I'm getting us out of here.",
+          "nextNodeId": "end",
+          "grantFlag": "has_access_card",
+          "giveItemId": "access_card"
+        }
+      ]
+    }
+  ]
+}

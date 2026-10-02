@@ -1,0 +1,56 @@
+[
+  {
+    "id": "rusty_key",
+    "name": "Rusty Key",
+    "description": "An old iron key found in the maintenance room. Opens security sector doors.",
+    "type": "KEY",
+    "bonusAttack": 0,
+    "bonusDefense": 0,
+    "healAmount": 0
+  },
+  {
+    "id": "health_potion",
+    "name": "Health Potion",
+    "description": "A synthesized stimulant canister that restores 35 HP.",
+    "type": "CONSUMABLE",
+    "bonusAttack": 0,
+    "bonusDefense": 0,
+    "healAmount": 35
+  },
+  {
+    "id": "iron_sword",
+    "name": "Iron Sword",
+    "description": "A reinforced alloy blade salvaged from facility security equipment (+10 ATK).",
+    "type": "WEAPON",
+    "bonusAttack": 10,
+    "bonusDefense": 0,
+    "healAmount": 0
+  },
+  {
+    "id": "access_card",
+    "name": "Access Card",
+    "description": "High-clearance electronic access card required to unlock the Main Facility Exit.",
+    "type": "QUEST",
+    "bonusAttack": 0,
+    "bonusDefense": 0,
+    "healAmount": 0
+  },
+  {
+    "id": "old_note",
+    "name": "Old Note",
+    "description": "A bloodstained memo: 'System override triggered quarantine lockdown. Do not trust automated units.'",
+    "type": "MISC",
+    "bonusAttack": 0,
+    "bonusDefense": 0,
+    "healAmount": 0
+  },
+  {
+    "id": "spare_battery",
+    "name": "Spare Battery",
+    "description": "A high-capacity lithium cell that powers facility terminals.",
+    "type": "MISC",
+    "bonusAttack": 0,
+    "bonusDefense": 0,
+    "healAmount": 0
+  }
+]
