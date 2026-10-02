@@ -1,0 +1,8 @@
+target/
+*.class
+.DS_Store
+*.iml
+.idea/
+.vscode/
+saves/*.json
+!saves/sample_save.json
