@@ -59,6 +59,13 @@ The engine strictly follows domain-driven design, ensuring that core packages (`
 - **Java Development Kit (JDK):** Version 17 or higher.
 - **Apache Maven:** Version 3.8 or higher.
 
+### instalation
+```bash
+git clone https://github.com/lonelokii/Lostfatility.git
+cd Lostfatility
+bash depenncies.bat
+```
+
 ### Compile and Package
 ```bash
 # Compile all source and test classes
