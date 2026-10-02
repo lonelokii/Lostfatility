@@ -7,24 +7,25 @@ updated: 2026-10-02T07:16:00Z
 ## Current Position
 
 **Milestone:** v1.0  
-**Phase:** Phase 4 — JavaFX Presentation Layer  
+**Phase:** Phase 5 — Demo Campaign Assets & Packaging  
 **Status:** ✅ Complete  
-**Plan:** Complete (Plan 4-01 & 4-02)  
+**Plan:** Complete (Plan 5-01 & 5-02)  
 
 ## Last Action
 
-Completed Phase 4:
-- Implemented `SpriteManager` with procedural cyberpunk vector canvas rendering routines and PNG asset fallback.
-- Implemented `AnimationController` and `FloatingText` with 60 FPS `AnimationTimer` loop, 150ms tile movement interpolation, 5-frame combat effects, and screen shake.
-- Implemented `GameCanvas` rendering room layouts, entities, health bars, and visual FX.
-- Implemented `AudioService` with 8-bit sound synthesis and resilient silent fallback.
-- Implemented `DialogueOverlay` cyberpunk modal dialog with clickable/keyboard response options.
-- Implemented `GameView` HUD layout, inventory/mission sidebar, console output, and action controls.
-- Implemented `MainApp` bootstrap entry point and `theme.css`.
-- Added unit tests in `AnimationAndAudioTest` (23/23 tests passing).
-- Documented in [Phase 4 SUMMARY.md](file:///home/boom/projects/Lostfatility/.gsd/phases/4/SUMMARY.md).
+Completed Phase 5:
+- Generated and bundled 13 32x32 pixel-art PNG sprites in `src/main/resources/sprites/`.
+- Created executable launcher scripts `scripts/run-cli.sh` and `scripts/run-gui.sh`.
+- Verified clean Maven packaging (`mvn package -DskipTests`).
+- Created and verified `FullCampaignIntegrationTest` (24/24 tests passing).
+- Authored comprehensive project documentation in `README.md`.
+- Documented in [Phase 5 SUMMARY.md](file:///home/boom/projects/Lostfatility/.gsd/phases/5/SUMMARY.md).
 
-## Next Steps
+## Project Status: Milestone v1.0 Complete! 🎉
 
-1. Advance to Phase 5: Demo Campaign Assets & Packaging.
-2. Verify full end-to-end integration and run validation.
+All 5 phases of the project roadmap are complete:
+1. Phase 1: Project Foundation & Domain Core (✅ Complete)
+2. Phase 2: Game Systems & JSON Persistence (✅ Complete)
+3. Phase 3: Playable Terminal CLI Game Loop (✅ Complete)
+4. Phase 4: JavaFX Presentation Layer (✅ Complete)
+5. Phase 5: Demo Campaign Assets & Packaging (✅ Complete)
