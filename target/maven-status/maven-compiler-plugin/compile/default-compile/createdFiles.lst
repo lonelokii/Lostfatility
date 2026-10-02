@@ -3,6 +3,8 @@ lostfacility/system/QuestManager.class
 lostfacility/model/Inventory.class
 lostfacility/system/DialogueManager.class
 lostfacility/action/UseAction.class
+lostfacility/gui/FloatingText.class
+lostfacility/gui/GameView.class
 lostfacility/system/DialogueNode.class
 lostfacility/action/LoadAction.class
 lostfacility/system/Quest.class
@@ -13,12 +15,17 @@ lostfacility/cli/CliApp.class
 lostfacility/action/TalkAction.class
 lostfacility/event/ItemEvent.class
 lostfacility/persistence/JsonLoader$GameBundle.class
+lostfacility/gui/GameView$1.class
+lostfacility/gui/MainApp.class
 lostfacility/model/Player.class
 lostfacility/engine/GameEngine.class
 lostfacility/cli/CliOutputFormatter.class
+lostfacility/gui/AnimationController$CombatEffect.class
 lostfacility/system/QuestObjective$Type.class
 lostfacility/system/QuestState.class
+lostfacility/gui/SpriteManager$1.class
 lostfacility/model/Npc.class
+lostfacility/gui/AnimationController$MoveInterpolation.class
 lostfacility/action/ExamineAction.class
 lostfacility/model/Tile.class
 lostfacility/model/Item.class
@@ -32,7 +39,11 @@ lostfacility/event/MoveEvent.class
 lostfacility/system/QuestObjective.class
 lostfacility/model/Entity.class
 lostfacility/event/CombatEvent.class
+lostfacility/gui/GameCanvas.class
+lostfacility/gui/DialogueOverlay.class
+lostfacility/gui/GameView$2.class
 lostfacility/action/ActionResult.class
+lostfacility/gui/AnimationController.class
 lostfacility/engine/CommandParser.class
 lostfacility/action/TakeAction.class
 lostfacility/action/MoveAction.class
@@ -41,6 +52,7 @@ lostfacility/system/CombatSystem$CombatResult.class
 lostfacility/persistence/SaveManager$SaveData.class
 lostfacility/model/Room.class
 lostfacility/action/AttackAction.class
+lostfacility/gui/AudioService.class
 lostfacility/persistence/SaveManager$ItemData.class
 lostfacility/persistence/SaveMetadata.class
 lostfacility/model/Position.class
@@ -49,7 +61,9 @@ lostfacility/system/CombatSystem.class
 lostfacility/action/EquipAction.class
 lostfacility/event/GameEvent.class
 lostfacility/event/ItemEvent$ActionType.class
+lostfacility/gui/AudioService$SoundEffect.class
 lostfacility/event/MessageEvent.class
+lostfacility/gui/SpriteManager.class
 lostfacility/system/DialogueChoice.class
 lostfacility/persistence/JsonLoader.class
 lostfacility/action/SaveAction.class

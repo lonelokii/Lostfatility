@@ -1,3 +1,5 @@
+lostfacility/engine/FullCampaignIntegrationTest.class
+lostfacility/gui/AnimationAndAudioTest.class
 lostfacility/persistence/SaveManagerTest.class
 lostfacility/cli/CliCampaignPlaythroughTest.class
 lostfacility/persistence/JsonLoaderTest.class
