@@ -1,7 +1,6 @@
 .agent/
 .agents/
 .gemini/
-.gsd/
 target/
 *.class
 .DS_Store
