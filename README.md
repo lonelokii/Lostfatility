@@ -53,54 +53,197 @@ The engine strictly follows domain-driven design, ensuring that core packages (`
 
 ---
 
-## 3. System Requirements & Build
+## 3. Installation & Build
 
-### Requirements
-- **Java Development Kit (JDK):** Version 17 or higher.
-- **Apache Maven:** Version 3.8 or higher.
+### Prerequisites
+- **Java Development Kit (JDK):** Version 17 or higher (Eclipse Temurin, Oracle JDK, OpenJDK, or Amazon Corretto).
+- **Apache Maven:** Version 3.8 or higher (*Optional*: pre-configured `./mvnw` and `mvnw.cmd` wrappers are included in the repository, so installing Maven separately is not required).
 
-### instalation
+---
+
+### Step 1: Clone the Repository
+
+Open your terminal or command prompt:
 ```bash
 git clone https://github.com/lonelokii/Lostfatility.git
 cd Lostfatility
-bash depenncies.bat
 ```
 
-### Compile and Package
+---
+
+### Windows Setup, Compilation & Build
+
+#### A. JDK 17+ Setup on Windows (If Not Already Installed)
+You can quickly install JDK 17 on Windows using Windows Package Manager (`winget`) or Chocolatey:
+
+```cmd
+:: Install Eclipse Temurin JDK 17 via winget (Windows 10 / 11)
+winget install EclipseAdoptium.Temurin.17.JDK
+
+:: Or install via Chocolatey
+choco install openjdk17
+```
+Or manually download the installer from [Eclipse Temurin](https://adoptium.net/) or [Oracle Java](https://www.oracle.com/java/technologies/downloads/).
+
+Verify that Java 17+ is accessible in your Command Prompt (`cmd.exe`) or PowerShell:
+```cmd
+java -version
+javac -version
+```
+
+> [!TIP]
+> If Windows reports `'java' is not recognized as an internal or external command`, make sure your JDK `bin` directory (e.g. `C:\Program Files\Eclipse Adoptium\jdk-17.x.x\bin`) is added to your Windows `PATH` environment variable, and that `JAVA_HOME` points to your JDK installation directory.
+
+#### B. Install Dependencies on Windows
+Run the automated batch script (double-click in File Explorer or run in CMD/PowerShell):
+```cmd
+:: Using the dependency installer script
+install-dependencies.bat
+```
+*Alternatively, you can install dependencies directly using the Maven wrapper:*
+```cmd
+mvnw.cmd dependency:go-offline clean compile
+```
+
+#### C. Compile the Code on Windows
+Compile the production domain core, systems, and test classes:
+```cmd
+:: In Command Prompt (CMD)
+mvnw.cmd clean compile test-compile
+
+:: In PowerShell
+.\mvnw.cmd clean compile test-compile
+```
+*(If Maven is installed globally on your machine, you can also run `mvn clean compile test-compile`)*
+
+#### D. Run Automated Tests on Windows
+Execute the headless JUnit 5 test suite (24 unit and integration tests):
+```cmd
+:: In Command Prompt
+mvnw.cmd test
+
+:: In PowerShell
+.\mvnw.cmd test
+```
+
+#### E. Package the Standalone Application on Windows
+Create the distributable JAR package:
+```cmd
+:: In Command Prompt
+mvnw.cmd package -DskipTests
+
+:: In PowerShell
+.\mvnw.cmd package -DskipTests
+```
+The compiled JAR file will be generated in the `target/` directory.
+
+---
+
+### Linux & macOS Setup, Compilation & Build
+
+#### A. Make Scripts Executable
 ```bash
-# Compile all source and test classes
-mvn compile test-compile
+chmod +x mvnw scripts/*.sh
+```
 
-# Run the complete headless test suite (24 unit & integration tests)
-mvn test
+#### B. Compile the Code
+```bash
+./mvnw clean compile test-compile
+```
 
-# Package standalone JAR artifact
-mvn package -DskipTests
+#### C. Run Automated Tests
+```bash
+./mvnw test
+```
+
+#### D. Package the Standalone Application
+```bash
+./mvnw package -DskipTests
 ```
 
 ---
 
 ## 4. Quick Start & Running
 
-Convenience launcher scripts are provided in the [`scripts/`](file:///home/boom/projects/Lostfatility/scripts) directory.
+Both Windows batch scripts (`.bat`) and Linux/macOS shell scripts (`.sh`) are provided in the [`scripts/`](file:///home/boom/projects/Lostfatility/scripts) directory for seamless execution.
 
-### Launch JavaFX Graphical Mode
+### Launch Option A: JavaFX Graphical Mode (Cyberpunk 2D GUI)
+
+#### On Windows:
+**Method 1 — Launcher Script (Recommended):**
+- Double-click [`scripts\run-gui.bat`](file:///home/boom/projects/Lostfatility/scripts/run-gui.bat) in Windows File Explorer, or run in terminal:
+```cmd
+:: Command Prompt
+scripts\run-gui.bat
+
+:: PowerShell
+.\scripts\run-gui.bat
+```
+
+**Method 2 — Using Maven Wrapper:**
+```cmd
+:: Command Prompt
+mvnw.cmd javafx:run
+
+:: PowerShell
+.\mvnw.cmd javafx:run
+```
+
+#### On Linux / macOS:
 ```bash
 # Using launcher script
 ./scripts/run-gui.sh
 
-# Or using Maven directly
-mvn javafx:run
+# Or using Maven wrapper directly
+./mvnw javafx:run
 ```
 
-### Launch Terminal CLI Mode
+---
+
+### Launch Option B: Terminal CLI Mode (Interactive Console)
+
+#### On Windows:
+**Method 1 — Launcher Script (Recommended):**
+- Double-click [`scripts\run-cli.bat`](file:///home/boom/projects/Lostfatility/scripts/run-cli.bat) in Windows File Explorer, or run in terminal:
+```cmd
+:: Command Prompt
+scripts\run-cli.bat
+
+:: PowerShell
+.\scripts\run-cli.bat
+```
+
+**Method 2 — Using Maven Wrapper:**
+```cmd
+:: Command Prompt
+mvnw.cmd exec:java -Dexec.mainClass="lostfacility.cli.CliApp"
+
+:: PowerShell
+.\mvnw.cmd exec:java -Dexec.mainClass="lostfacility.cli.CliApp"
+```
+
+> [!TIP]
+> **Windows Terminal & UTF-8 Encoding:** For the best visual experience in CLI mode (ANSI colors and crisp ASCII character maps), we recommend using **Windows Terminal** (standard on Windows 11). If using legacy `cmd.exe`, run `chcp 65001` before launching to ensure UTF-8 console output.
+
+#### On Linux / macOS:
 ```bash
 # Using launcher script
 ./scripts/run-cli.sh
 
-# Or using Maven directly
-mvn exec:java -Dexec.mainClass="lostfacility.cli.CliApp"
+# Or using Maven wrapper directly
+./mvnw exec:java -Dexec.mainClass="lostfacility.cli.CliApp"
 ```
+
+---
+
+### Windows Troubleshooting FAQ
+
+| Problem | Cause | Solution |
+|---|---|---|
+| `'java' is not recognized as an internal or external command` | JDK 17+ is not installed or not in the Windows `PATH`. | Install JDK 17 using `winget install EclipseAdoptium.Temurin.17.JDK` or add your JDK `bin` folder to the system `PATH` variable. |
+| `'mvnw.cmd' is not recognized` | Running in PowerShell without relative path notation. | In PowerShell, prefix commands with `.\` (e.g. `.\mvnw.cmd compile` or `.\scripts\run-gui.bat`). |
+| Strange characters or question marks in Terminal CLI | Legacy Windows `cmd.exe` code page is not set to UTF-8. | Run `chcp 65001` in the prompt, or use Windows Terminal / PowerShell. |
+| JavaFX graphics window does not display | Missing graphical display or outdated graphics drivers. | Ensure your GPU display drivers are up to date, or run in Terminal CLI mode (`scripts\run-cli.bat`). |
 
 ---
 
@@ -262,9 +405,13 @@ Define rooms with human-readable ASCII layout strings:
 ```text
 Lostfatility/
 ├── pom.xml                                  # Maven dependencies & plugins
+├── install-dependencies.bat                 # Windows automated dependency installer
+├── mvnw / mvnw.cmd                          # Cross-platform Maven wrappers (Linux/macOS & Windows)
 ├── scripts/
-│   ├── run-gui.sh                           # JavaFX graphical launcher
-│   └── run-cli.sh                           # Terminal CLI launcher
+│   ├── run-gui.bat                          # Windows JavaFX GUI launcher
+│   ├── run-cli.bat                          # Windows Terminal CLI launcher
+│   ├── run-gui.sh                           # Linux/macOS JavaFX GUI launcher
+│   └── run-cli.sh                           # Linux/macOS Terminal CLI launcher
 ├── saves/                                   # Multi-slot JSON save files
 ├── src/
 │   ├── main/
