@@ -1,4 +1,5 @@
 lostfacility/persistence/SaveManagerTest.class
+lostfacility/cli/CliCampaignPlaythroughTest.class
 lostfacility/persistence/JsonLoaderTest.class
 lostfacility/engine/CommandParserTest.class
 lostfacility/engine/MovementAndCollisionTest.class

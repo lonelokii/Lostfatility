@@ -21,7 +21,8 @@
         {
           "x": 4,
           "y": 3,
-          "locked": false
+          "locked": false,
+          "targetRoomId": "corridor"
         }
       ],
       "items": [
@@ -109,7 +110,8 @@
           "x": 3,
           "y": 3,
           "locked": true,
-          "keyRequiredId": "access_card"
+          "keyRequiredId": "access_card",
+          "targetRoomId": "main_exit"
         }
       ],
       "items": []

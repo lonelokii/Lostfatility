@@ -2,6 +2,7 @@ package lostfacility.system;
 
 import lostfacility.engine.GameState;
 import lostfacility.event.EventManager;
+import lostfacility.event.ItemEvent;
 import lostfacility.event.MessageEvent;
 import lostfacility.model.Item;
 
@@ -82,6 +83,8 @@ public class DialogueManager implements Serializable {
             Item item = Item.createQuestItem(selected.giveItemId(), "Access Card", "Keycard to open the main facility exit.");
             state.getPlayer().getInventory().addItem(item);
             if (events != null) {
+                ItemEvent itemEvent = new ItemEvent(ItemEvent.ActionType.TAKE, item.getId(), item.getName(), state.getPlayer().getName(), "Received from NPC");
+                events.publish(itemEvent);
                 events.publish(new MessageEvent("Received " + item.getName() + "!", MessageEvent.Channel.SYSTEM));
             }
         }

@@ -5,3 +5,4 @@
 /home/boom/projects/Lostfatility/src/test/java/lostfacility/engine/CommandParserTest.java
 /home/boom/projects/Lostfatility/src/test/java/lostfacility/persistence/JsonLoaderTest.java
 /home/boom/projects/Lostfatility/src/test/java/lostfacility/persistence/SaveManagerTest.java
+/home/boom/projects/Lostfatility/src/test/java/lostfacility/cli/CliCampaignPlaythroughTest.java

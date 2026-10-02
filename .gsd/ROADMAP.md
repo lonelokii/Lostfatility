@@ -1,12 +1,12 @@
 ---
 milestone: v1.0
 version: 1.0.0
-updated: 2026-10-02T07:10:00Z
+updated: 2026-10-02T07:15:00Z
 ---
 
 # ROADMAP.md — Project Roadmap
 
-> **Current Phase:** Phase 3 — Playable Terminal CLI Game Loop  
+> **Current Phase:** Phase 4 — JavaFX Presentation Layer  
 > **Status:** 🔄 Ready to Execute  
 
 ## Must-Haves (from SPEC)
@@ -14,7 +14,7 @@ updated: 2026-10-02T07:10:00Z
 - [x] Reusable decoupled engine core with zero JavaFX dependencies (Verified in Phase 1)
 - [x] Data-driven game data loading from JSON (`games/lost_facility/`) (Verified in Phase 2)
 - [x] Turn-based combat, enemy AI, collision, inventory, and quest tracking (Verified in Phase 1 & 2)
-- [ ] Interactive playable Terminal CLI mode (`CliApp`)
+- [x] Interactive playable Terminal CLI mode (`CliApp`) (Verified in Phase 3)
 - [ ] JavaFX 2D graphical mode (`MainApp`) with Canvas, HUD, animations, and sound
 - [ ] Complete demonstration campaign "The Lost Facility" from start to exit
 
@@ -48,22 +48,26 @@ updated: 2026-10-02T07:10:00Z
 ---
 
 ### Phase 3: Playable Terminal CLI Game Loop
-**Status:** 🔄 Ready to Execute  
+**Status:** ✅ Complete  
 **Objective:** Build an interactive terminal CLI game runner (`CliApp`) rendering ASCII maps, accepting text commands, printing colored combat logs, and allowing full gameplay from start to escape without any GUI.  
 **Depends on:** Phase 2  
 **Requirements:** REQ-12  
 
 **Plans:**
-- [ ] Plan 3-01: ASCII Map Renderer & CLI Output Formatter
-- [ ] Plan 3-02: Terminal Game Loop & Interactive Verification
+- [x] Plan 3-01: ASCII Map Renderer & CLI Output Formatter
+- [x] Plan 3-02: Terminal Game Loop & Interactive Verification (19/19 tests passing)
 
 ---
 
 ### Phase 4: JavaFX Presentation Layer
-**Status:** ⬜ Not Started  
+**Status:** 🔄 Ready to Execute  
 **Objective:** Construct the JavaFX application (`MainApp`) featuring a 60 FPS `Canvas` renderer, `AnimationTimer` with 150ms tile travel interpolation, 5-frame attack animations, a dark sci-fi retro HUD, dialogue overlay, and modular `AudioService`.  
 **Depends on:** Phase 3  
 **Requirements:** REQ-13, REQ-14, REQ-15  
+
+**Plans:**
+- [ ] Plan 4-01: JavaFX Canvas Viewport, AnimationTimer & Sprite Engine
+- [ ] Plan 4-02: Retro HUD Layout, Controls, Dialogue Overlay & AudioService
 
 ---
 
@@ -81,6 +85,6 @@ updated: 2026-10-02T07:10:00Z
 |---|---|---|---|
 | **1. Foundation & Domain Core** | ✅ Complete | 3/3 | 100% |
 | **2. Systems & Persistence** | ✅ Complete | 3/3 | 100% |
-| **3. Playable Terminal CLI** | 🔄 Ready | 0/2 | 0% |
-| **4. JavaFX Presentation Layer** | ⬜ Not Started | 0/2 | 0% |
+| **3. Playable Terminal CLI** | ✅ Complete | 2/2 | 100% |
+| **4. JavaFX Presentation Layer** | 🔄 Ready | 0/2 | 0% |
 | **5. Assets & Verification** | ⬜ Not Started | 0/2 | 0% |

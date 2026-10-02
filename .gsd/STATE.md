@@ -1,5 +1,5 @@
 ---
-updated: 2026-10-02T07:10:00Z
+updated: 2026-10-02T07:16:00Z
 ---
 
 # Project State
@@ -7,22 +7,22 @@ updated: 2026-10-02T07:10:00Z
 ## Current Position
 
 **Milestone:** v1.0  
-**Phase:** Phase 3 — Playable Terminal CLI Game Loop  
+**Phase:** Phase 4 — JavaFX Presentation Layer  
 **Status:** 🔄 Ready to Execute  
-**Plan:** Ready to plan and execute Phase 3  
+**Plan:** Ready to plan and execute Phase 4  
 
 ## Last Action
 
-Completed Phase 2:
-- Implemented `CombatSystem`, `DialogueManager`, `QuestManager`.
-- Implemented `JsonLoader` and multi-slot `SaveManager`.
-- Authored external campaign files in `src/main/resources/games/lost_facility/`.
-- Verified with 18 passing tests (100% success rate).
-- Updated [Phase 2 VERIFICATION.md](file:///home/boom/projects/Lostfatility/.gsd/phases/2/VERIFICATION.md) and [Phase 2 SUMMARY.md](file:///home/boom/projects/Lostfatility/.gsd/phases/2/SUMMARY.md).
+Completed Phase 3:
+- Implemented `AsciiMapRenderer` and `CliOutputFormatter`.
+- Implemented `CliApp` interactive terminal game runner.
+- Verified end-to-end full campaign walkthrough from Maintenance Room to Main Exit escape via `CliCampaignPlaythroughTest` (19/19 tests passing).
+- Documented in [Phase 3 SUMMARY.md](file:///home/boom/projects/Lostfatility/.gsd/phases/3/SUMMARY.md).
 
 ## Next Steps
 
-1. Execute Phase 3:
-   - Build `CliApp` terminal runner with ASCII map rendering, status bars, and interactive input loop.
-   - Run end-to-end headless gameplay verification from Maintenance Room to Main Exit escape.
-2. Advance to Phase 4: JavaFX Presentation Layer.
+1. Execute Phase 4:
+   - Build JavaFX Canvas renderer (`GameCanvas`) with 60 FPS `AnimationTimer` loop.
+   - Implement smooth 150ms tile position interpolation and 5-frame attack animations.
+   - Build dark sci-fi retro HUD layout with JavaFX controls, action buttons, command bar, dialogue overlay, and `AudioService`.
+2. Advance to Phase 5: Demo Campaign Assets & Packaging.

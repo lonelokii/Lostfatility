@@ -33,8 +33,11 @@ public record MoveAction(Direction direction) implements GameAction {
         Position fromPos = player.getPosition();
         Position toPos = fromPos.add(direction);
 
-        // Check if movement goes through a room exit boundary
-        if (!room.isInBounds(toPos)) {
+        Tile targetTile = room.isInBounds(toPos) ? room.getTile(toPos) : null;
+
+        // Check if movement goes through a room exit boundary or steps into boundary wall at an exit
+        boolean isBoundaryExit = (targetTile != null && targetTile.getType() == TileType.WALL && room.getExit(direction) != null);
+        if (!room.isInBounds(toPos) || isBoundaryExit) {
             String targetRoomId = room.getExit(direction);
             if (targetRoomId != null) {
                 Room targetRoom = state.getWorld().getRoom(targetRoomId);
@@ -53,8 +56,6 @@ public record MoveAction(Direction direction) implements GameAction {
             }
             return ActionResult.failure("You cannot go that way.");
         }
-
-        Tile targetTile = room.getTile(toPos);
 
         // Check door interaction
         if (targetTile.isDoor()) {

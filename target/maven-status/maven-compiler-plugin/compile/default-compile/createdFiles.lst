@@ -9,11 +9,13 @@ lostfacility/system/Quest.class
 lostfacility/action/GameAction.class
 lostfacility/event/MessageEvent$Channel.class
 lostfacility/engine/GameState.class
+lostfacility/cli/CliApp.class
 lostfacility/action/TalkAction.class
 lostfacility/event/ItemEvent.class
 lostfacility/persistence/JsonLoader$GameBundle.class
 lostfacility/model/Player.class
 lostfacility/engine/GameEngine.class
+lostfacility/cli/CliOutputFormatter.class
 lostfacility/system/QuestObjective$Type.class
 lostfacility/system/QuestState.class
 lostfacility/model/Npc.class
@@ -24,6 +26,7 @@ lostfacility/model/Enemy.class
 lostfacility/model/EnemyState.class
 lostfacility/model/World.class
 lostfacility/persistence/SaveManager.class
+lostfacility/cli/AsciiMapRenderer.class
 lostfacility/event/EventManager.class
 lostfacility/event/MoveEvent.class
 lostfacility/system/QuestObjective.class

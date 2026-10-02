@@ -143,6 +143,9 @@ public class JsonLoader {
                         if (dNode.has("keyRequiredId")) {
                             tile.setRequiredKeyId(dNode.get("keyRequiredId").asText());
                         }
+                        if (dNode.has("targetRoomId")) {
+                            tile.setTargetRoomId(dNode.get("targetRoomId").asText());
+                        }
                     }
                 }
             }
