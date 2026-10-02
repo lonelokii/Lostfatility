@@ -191,4 +191,8 @@ public class CliApp {
     public QuestManager getQuestManager() {
         return questManager;
     }
+
+    public String renderCurrentView() {
+        return formatter.renderDashboard(state, dialogueManager, questManager.getActiveQuest());
+    }
 }
